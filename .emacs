@@ -20,7 +20,12 @@
 (use-package markdown-mode
   :ensure t)
 (use-package evil
-  :ensure t)
+  :ensure t
+  :config
+  (use-package evil-surround
+    :ensure t
+    :config
+    (global-evil-surround-mode)))
 (use-package evil-leader
   :ensure t)
 (use-package helm
@@ -40,7 +45,9 @@
 (global-evil-leader-mode)
 (evil-leader/set-key
   "b" 'switch-to-buffer
+  "B" 'helm-buffers-list
   "k" 'kill-buffer
+  "K" 'kill-this-buffer
   "x" 'eval-last-sexp
   "X" 'eval-buffer
   "f" 'helm-find-files
@@ -61,9 +68,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(backup-directory-alist (quote (("." . "/User/danielmiller/.emacs/backups"))))
  '(package-selected-packages
    (quote
-    (rjsx-mode dracula-theme helm evil-mode markdown-mode use-package evil-visual-mark-mode evil-leader))))
+    (evil-surround rjsx-mode dracula-theme helm evil-mode markdown-mode use-package evil-visual-mark-mode evil-leader))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
