@@ -29,7 +29,10 @@
 (use-package evil-leader
   :ensure t)
 (use-package helm
-  :ensure t)
+  :ensure t
+  :config
+  (require 'helm-config)
+  (helm-mode 1))
 (use-package rjsx-mode
   :ensure t)
 (use-package dracula-theme
@@ -38,6 +41,8 @@
 ;; Start the emacs server
 (server-start)
 
+;; Parens mode
+(show-paren-mode t)
 
 ;; Set up packages
 (require 'evil-leader)
@@ -48,8 +53,8 @@
   "B" 'helm-buffers-list
   "k" 'kill-buffer
   "K" 'kill-this-buffer
-  "x" 'eval-last-sexp
-  "X" 'eval-buffer
+  "e" 'eval-last-sexp
+  "E" 'eval-buffer
   "f" 'helm-find-files
   "O" 'delete-other-windows
   "X" 'helm-M-x
@@ -59,8 +64,6 @@
 (evil-mode t)
 
 (require 'helm)
-(require 'helm-config)
-(helm-mode 1)
 
 (require 'markdown-mode)
 (custom-set-variables
@@ -78,3 +81,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+;; handling whitespace
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+(setq delete-trailing-lines nil)
