@@ -36,6 +36,7 @@
 (use-package evil-leader
   :ensure t
   :config
+  (defun create-line-above () (interactive) (evil-open-above 1) (evil-open-below 1) (evil-open-above 1))
   (evil-leader/set-leader ",")
   (global-evil-leader-mode)
   (evil-leader/set-key
@@ -46,12 +47,12 @@
     "e" 'eval-last-sexp
     "E" 'eval-buffer
     "f" 'helm-find-files
+    "i" 'create-line-above
     "o" 'kill-other-buffers
     "O" 'delete-other-windows
     "r" 'split-window-right
     "X" 'helm-M-x
-    "w" 'save-buffer)
-  )
+    "w" 'save-buffer))
 (use-package helm
   :ensure t
   :config
@@ -126,3 +127,6 @@
 
 ;;Font is font
 (set-frame-font "Hack-16" nil t)
+
+;;Tags file for dokkio
+(setq tags-table-list '("/Volumes/dokkio/dokkio/TAGS"))
