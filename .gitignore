@@ -1,0 +1,20 @@
+# Folders
+/Applications/**
+/Pictures/**
+/Repositories/**
+/Work/**
+/Documents/**
+/Desktop/**
+/Library/**
+/Music/**
+/Movies/**
+/Public/**
+/Downloads/**
+
+# Files
+/.*
+
+# Keep certain files
+!/.emacs
+!/.zshrc
+!/.gitignore
