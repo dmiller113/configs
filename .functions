@@ -1,0 +1,32 @@
+# Git Current Branch is very useful for enabling ggpush/ggpull
+function git_current_branch() {
+  echo -n $(git symbolic-ref HEAD 2> /dev/null | sed -Ee 's#refs/heads/##')
+}
+
+# Ease of editing config
+dconfig() {
+  "$EDITOR" "$HOME/.zshrc";
+}
+
+dfunction() {
+  "$EDITOR" "$HOME/.functions";
+}
+
+dalias() {
+  "$EDITOR" "$HOME/.aliases";
+}
+
+mv-temp() {
+	mv "$@" ~/temp;
+}
+
+# Fuzzy find for git branches
+fgco() {
+	if [ "$#" -eq 0 ]; then
+		git branch | fzf | sed -Ee 's/^\* //' | xargs git checkout;
+	fi
+	if [ "$#" -ne 0 ]; then
+		git branch | fzf -q "$@" | sed -Ee 's/^\* //' | xargs git checkout;
+	fi
+}
+

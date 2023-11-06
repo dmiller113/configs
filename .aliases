@@ -1,0 +1,20 @@
+# Better defaults
+# alias ls='gls -lhNp --group-directories-first --color=auto'
+alias ls='ls -lhpG'
+
+# Git aliases
+alias gst='git status '
+alias gco='git checkout '
+alias gcb='git checkout -b '
+alias gc='git commit -v '
+alias ggpush='git push origin $(git_current_branch) '
+alias ggpull='git pull origin $(git_current_branch) '
+alias gf='git fetch '
+alias gbl='git branch --list '
+alias gdiff='git diff '
+alias ga='git add '
+alias grh='git reset $(git_current_branch) '
+alias gca='git commit --all '
+alias gd='git diff '
+alias gl='git log '
+
