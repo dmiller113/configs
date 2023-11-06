@@ -1,3 +1,10 @@
+#     dMMMMMP dMP dMP dMMMMb  .aMMMb dMMMMMMP dMP .aMMMb  dMMMMb  .dMMMb 
+#    dMP     dMP dMP dMP dMP dMP"VMP   dMP   amr dMP"dMP dMP dMP dMP" VP 
+#   dMMMP   dMP dMP dMP dMP dMP       dMP   dMP dMP dMP dMP dMP  VMMMb   
+#  dMP     dMP.aMP dMP dMP dMP.aMP   dMP   dMP dMP.aMP dMP dMP dP .dMP   
+# dMP      VMMMP" dMP dMP  VMMMP"   dMP   dMP  VMMMP" dMP dMP  VMMMP"    
+
+
 # Git Current Branch is very useful for enabling ggpush/ggpull
 function git_current_branch() {
   echo -n $(git symbolic-ref HEAD 2> /dev/null | sed -Ee 's#refs/heads/##')

@@ -1,3 +1,9 @@
+#     .aMMMb  dMP     dMP .aMMMb  .dMMMb  dMMMMMP .dMMMb 
+#    dMP"dMP dMP     amr dMP"dMP dMP" VP dMP     dMP" VP 
+#   dMMMMMP dMP     dMP dMMMMMP  VMMMb  dMMMP    VMMMb   
+#  dMP dMP dMP     dMP dMP dMP dP .dMP dMP     dP .dMP   
+# dMP dMP dMMMMMP dMP dMP dMP  VMMMP" dMMMMMP  VMMMP"    
+
 # Better defaults
 # alias ls='gls -lhNp --group-directories-first --color=auto'
 alias ls='ls -lhpG'
