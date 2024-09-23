@@ -1,4 +1,4 @@
-" Line Numbers
+"${HIGHLIGHT} Line Numbers
 set number relativenumber
 augroup numbertoggle
   autocmd!
@@ -39,3 +39,14 @@ nnoremap <leader>nl o<esc>
 nnoremap <leader>fs :w<CR>
 nnoremap <leader>feR :source ~/.vimrc<CR>
 nnoremap <leader>qq :q!
+
+" Window Movement
+nnoremap <leader>wl <c-w>l
+nnoremap <leader>wh <c-w>h
+nnoremap <leader>wk <c-w>k
+nnoremap <leader>wj <c-w>j
+nnoremap <leader>w^ <c-w>^
+
+" Zooms
+nnoremap <leader>zi <c-w>_ <bar> <c-w><bar>
+nnoremap <leader>zo <c-w>=
