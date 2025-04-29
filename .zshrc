@@ -54,9 +54,6 @@ function hfind() {
     fi
 }
 
-# FBN specific
-[ -s "$HOME/.fbnrc" ] && \. "$HOME/.fbnrc"
-
 # Aliases
 [ -s "$HOME/.aliases" ] && \. "$HOME/.aliases"
 
@@ -74,4 +71,3 @@ export HISTFILESIZE=100000
 # Tired of typing all the shit for tmux config
 export TMUX_CONFIG="$XDG_CONFIG_HOME/tmux/tmux.conf"
 
-source "$HOME/.docker/init-zsh.sh" || true # Added by Docker Desktop
